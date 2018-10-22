@@ -32,28 +32,33 @@ public class lab20 {
 		avgPrice(list, listPrice);
 	}
 
-	public static ArrayList<String> avgPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
-		System.out.println("Average:");
-		System.out.println("==============");
-		double avgPrice = ( ArrayList<Double> listPrice(0-6) /  ArrayList<String> listPrice.size() );
+	public static double avgPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
 
+		double sum = 0;
+		for (int i = 0; i < listPrice.size(); i++) {
+			sum += i;
+		}
+
+		double avgPrice = sum / listPrice.size();// Avg Double listPrice
+		System.out.println("Average: " + avgPrice);
+		System.out.println("=========");
 		minPrice(list, listPrice);
-		return list;
+		return avgPrice;
 	}
 
-	public static ArrayList<String> minPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
+	public static ArrayList<Double> minPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
 		System.out.println("Min Price:");
-		System.out.println("==============");
+		System.out.println("========");
 
 		maxPrice(list, listPrice);
-		return list;
+		return listPrice;
 	}
 
-	public static ArrayList<String> maxPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
+	public static ArrayList<Double> maxPrice(ArrayList<String> list, ArrayList<Double> listPrice) {
 		System.out.println("Max Price:");
-		System.out.println("==============");
+		System.out.println("=========");
 
-		return list;
+		return listPrice;
 	}
 
 }
